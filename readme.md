@@ -9,7 +9,7 @@ THIS IS A COUNTER PROJECT
 **LINK TO REMOTE REPOSITORY**
 https://github.com/carry1224/object-oriented
 **LIVE LINK**
-https://tinyurl.com/4rs7sbu3
+https://tinyurl.com/mryna444
 **software licence**
 >>Copyright <2024> <CATHERINE CARRY>
 

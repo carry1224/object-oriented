@@ -63,8 +63,25 @@ class counter{
     this.decreasebtn=element.querrySelector('.decrease')
     this.valueDom=element.querrySelector('.value')
     this.valueDom.textContent=this.value
-    
-
+    //binding all functions together
+    this.incease=this.increase.bind(this)
+    this.decrease=this.decrease.bind(this)
+    this.reset=this.reset.bind(this)
+    //addingeventlisternes
+    this.resetbtn.addEventListener('click',this.reset)
+    this.increasebtn.addEventListener('click',this.increase)
+    this.decreasebtn.addEventListener('click',this.decrease)
   }
-
+  increase(){
+    this.value++
+    this.valueDom.textContent=this.value
+  }
+  decrease(){
+    this.value--
+    this.valueDom.textContent=this.value
+  }
+  reset(){
+    this.value=0
+    this.valueDom.textContent=this.value
+  }
 }

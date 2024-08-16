@@ -54,17 +54,25 @@ buttons.forEach(function(btns){
   })
 })*/
 
-class counter{
+function getElement(selection){
+  let element=document.querySelector(selection)
+  if(element){
+    return element
+  }
+  
+}
+
+class Counter{
   constructor(element,value){
     this.element=element
     this.value=value
-    this.resetbtn=element.querrySelector('.reset')
-    this.increasebtn=element.querrySelector('.increase')
-    this.decreasebtn=element.querrySelector('.decrease')
-    this.valueDom=element.querrySelector('.value')
+    this.resetbtn=element.querySelector('.reset')
+    this.increasebtn=element.querySelector('.increase')
+    this.decreasebtn=element.querySelector('.decrease')
+    this.valueDom=element.querySelector('.value')
     this.valueDom.textContent=this.value
     //binding all functions together
-    this.incease=this.increase.bind(this)
+    this.increase=this.increase.bind(this)
     this.decrease=this.decrease.bind(this)
     this.reset=this.reset.bind(this)
     //addingeventlisternes
@@ -85,3 +93,5 @@ class counter{
     this.valueDom.textContent=this.value
   }
 }
+let firstCounter=new Counter(getElement('.first-counter'),100)
+let secondCounter=new Counter(getElement('.second-counter'),200)

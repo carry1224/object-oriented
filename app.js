@@ -1,4 +1,4 @@
-let containers=document.getElementById('one')
+/*let containers=document.getElementById('one')
 let btn=document.querySelectorAll('.two')
 
 let initialValue=100
@@ -52,4 +52,19 @@ buttons.forEach(function(btns){
   
     counter.textContent=Value
   })
-})
+})*/
+
+class counter{
+  constructor(element,value){
+    this.element=element
+    this.value=value
+    this.resetbtn=element.querrySelector('.reset')
+    this.increasebtn=element.querrySelector('.increase')
+    this.decreasebtn=element.querrySelector('.decrease')
+    this.valueDom=element.querrySelector('.value')
+    this.valueDom.textContent=this.value
+    
+
+  }
+
+}
